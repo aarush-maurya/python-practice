@@ -17,10 +17,3 @@ if rate == 10:
     print("Awesome! Your best day!")
 print(f"Now imagine you're enjoying {food} in {place} during {season} — sounds nice?")
 
-# 7: Score Checker
-print("\033[32m=== Score Checker ===\033[0m")
-score = int(input("Enter your score: "))
-if score >= 1000:
-    print("Congratulations, you won!")
-else:
-    print("You lost, try again!")
