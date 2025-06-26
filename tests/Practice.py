@@ -1,4 +1,10 @@
-name = input("Enter you name :")
-print(f"Good Afternoon {name}!")
+a = int(input("Enter your Interger : "))
+b = int(input("Enter your second int(interger : "))
 
-
+print(f"The addition of those is {a +b}")
+print(f"the subtraction of those is: {a-b}")
+print(f"hte multiplication of those is{a*b}")
+print(f"the division of both is{a/b}")
+print(f"The remainder when a is divided by b is {a%b}")
+print(f"THe a raise to the power of b is {a**b}")
+print(f"The a/b not including remiander is {a//b}")
