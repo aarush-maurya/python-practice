@@ -1,0 +1,1 @@
+tip_verify = int(input(f"Do you also want to give tip?, if yes, the how much percentage of bill"))
