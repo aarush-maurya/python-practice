@@ -8,4 +8,3 @@
 # print(f"The remainder when a is divided by b is {a%b}")
 # print(f"THe a raise to the power of b is {a**b}")
 # print(f"The a/b not including remiander is {a//b}")
-
