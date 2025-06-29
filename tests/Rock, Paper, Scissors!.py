@@ -7,33 +7,33 @@ while True:
     pl_1 = input(f"Player 1 move :")
     pl_2 = input(f"Player 2 move : ")
     if pl_1 == pl_2:
-        print(f"Draw!")
+        print(f"Draw!, you both types same things")
         continue
-    elif pl_1 == 'R':
-        if pl_2=='P':
+    elif pl_1.upper() == 'R':
+        if pl_2.upper()=='P':
             win= '2'
             pl2_w += 1
-        elif pl_2 == 'S':
+        elif pl_2.upper() == 'S':
             win ='1'
             pl1_w += 1
         else:
             print(f"You have to type 'R' ,'P' or 'S'")
             exit()
-    elif pl_1 == 'P':
-        if pl_2 == 'R':
+    elif pl_1.upper() == 'P':
+        if pl_2.upper() == 'R':
             win = '1'
             pl1_w += 1
-        elif pl_2 == 'S':
+        elif pl_2.upper() == 'S':
             win ='2'
             pl2_w += 1
         else:
             print(f"You have to type 'R' ,'P' or 'S'")
             exit()
-    elif pl_1 == 'S':
-        if pl_2 == 'R':
+    elif pl_1.upper() == 'S':
+        if pl_2.upper() == 'R':
             win = '2'
             pl2_w += 1
-        elif pl_2 == 'P':
+        elif pl_2.upper() == 'P':
             win ='1'
             pl1_w += 1
         else:
