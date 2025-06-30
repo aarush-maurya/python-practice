@@ -1,0 +1,1 @@
+ix/roll_amt)*100}% for instance the percentage probability of occurace of 6 is {round(100/6, 3)}% ")
