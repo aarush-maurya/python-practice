@@ -27,6 +27,7 @@ while True:
     char_type_1 = input("Enter your character type(Human, Elf, Wisard, Orc...): ")
     st_1 = strength()
     ht_1 = health()
+    print(f"WARRIOR : {name_1}")
     print(f"STRENGTH: {st_1}")
     print(f"HEALTH  : {ht_1}")
     print("May your name go down in legend...")
@@ -37,6 +38,10 @@ while True:
         os.system("cls")
         continue
     elif replay.capitalize() == "No":
+        time.sleep(1)
+        print(f"Warrior {name_1} is ready for the Battle")
+        time.sleep(3)
+        os.system("cls")
         break
     else:
         while True:
@@ -55,16 +60,20 @@ while True:
     char_type_2 = input("Enter your character type(Human, Elf, Wisard, Orc...): ")
     st_2 = strength()
     ht_2 = health()
+    print(f"WARRIOR : {name_2}")
     print(f"STRENGTH: {st_2}")
     print(f"HEALTH  : {ht_2}")
-    print("May your name go down in legend...")
-
+    
     replay = input("Do you want to build again? (Yes/No): ")
     if replay.capitalize() == "Yes":
         time.sleep(1)
         os.system("cls")
         continue
     elif replay.capitalize() == "No":
+        time.sleep(1)
+        print(f"The Warrior {name_2} is ready to fight {name_1}")
+        time.sleep(3)
+        os.system("cls")
         break
     else:
         while True:
@@ -81,22 +90,20 @@ print(f"\nAt one side, we have \033[34m{name_1}\033[0m, a skilled \033[32m{char_
 time.sleep(2)
 print(f"On the other side, there's \033[31m{name_2}\033[0m, a fierce \033[32m{char_type_2}\033[0m, feared by all.\n")
 time.sleep(3)
-
-print(f"\033[36mFirst Round!\033[0m")
-time.sleep(1)
-print(f"\033[33m1...\033[0m")
-time.sleep(1)
-print(f"\033[33m2...\033[0m")
-time.sleep(1)
-print(f"\033[33m3...\033[0m")
-time.sleep(1)
-print(f"\033[33mFIGHT!\033[0m\n")
-time.sleep(1)
-
 # --- Battle Loop ---
 while True:
-    round += 1
+
     print(f"\033[36m--- ROUND {round} ---\033[0m")
+    time.sleep(1)
+    print(f"\033[33m1...\033[0m")
+    time.sleep(1)
+    print(f"\033[33m2...\033[0m")
+    time.sleep(1)
+    print(f"\033[33m3...\033[0m")
+    time.sleep(1)
+    print(f"\033[33mFIGHT!\033[0m\n")
+    time.sleep(1)
+    round += 1
     win_number_1 = roll(6)
     win_number_2 = roll(6)
 
@@ -135,6 +142,7 @@ while True:
             print(f"{loser} survives with {ht_1} health.\n")
 
     time.sleep(4)
+
 
 # --- Victory Message ---
 time.sleep(1)
