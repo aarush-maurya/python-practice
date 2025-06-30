@@ -27,8 +27,8 @@ while True:
     char_type_1 = input("Enter your character type(Human, Elf, Wisard, Orc...): ")
     st_1 = strength()
     ht_1 = health()
-    print(f"STRENGTH: {st_1:.1f}")
-    print(f"HEALTH  : {ht_1:.1f}")
+    print(f"STRENGTH: {st_1}")
+    print(f"HEALTH  : {ht_1}")
     print("May your name go down in legend...")
 
     replay = input("Do you want to build again? (Yes/No): ")
@@ -55,8 +55,8 @@ while True:
     char_type_2 = input("Enter your character type(Human, Elf, Wisard, Orc...): ")
     st_2 = strength()
     ht_2 = health()
-    print(f"STRENGTH: {st_2:.1f}")
-    print(f"HEALTH  : {ht_2:.1f}")
+    print(f"STRENGTH: {st_2}")
+    print(f"HEALTH  : {ht_2}")
     print("May your name go down in legend...")
 
     replay = input("Do you want to build again? (Yes/No): ")
@@ -77,11 +77,12 @@ while True:
                 break
 
 # --- Fight Introduction ---
-print(f"\nAt one side, we have {name_1}, a skilled {char_type_1}, known for unmatched power.")
-print(f"On the other side, there's {name_2}, a fierce {char_type_2}, feared by all.\n")
+print(f"\nAt one side, we have \033[34m{name_1}\033[0m, a skilled \033[32m{char_type_1}\033[0m, known for unmatched power.")
 time.sleep(2)
+print(f"On the other side, there's \033[31m{name_2}\033[0m, a fierce \033[32m{char_type_2}\033[0m, feared by all.\n")
+time.sleep(3)
 
-print(f"\033[33mROUND {round}\033[0m")
+print(f"\033[36mFirst Round!\033[0m")
 time.sleep(1)
 print(f"\033[33m1...\033[0m")
 time.sleep(1)
@@ -125,15 +126,15 @@ while True:
         if ht_2 <= 0:
             break
         else:
-            print(f"{loser} survives with {ht_2:.1f} health.\n")
+            print(f"{loser} survives with {ht_2} health.\n")
     else:
         ht_1 -= dmg
         if ht_1 <= 0:
             break
         else:
-            print(f"{loser} survives with {ht_1:.1f} health.\n")
+            print(f"{loser} survives with {ht_1} health.\n")
 
-    time.sleep(1)
+    time.sleep(4)
 
 # --- Victory Message ---
 time.sleep(1)
