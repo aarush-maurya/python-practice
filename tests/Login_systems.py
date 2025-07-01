@@ -15,7 +15,17 @@ verified = f"\033[1m\033[32mWELCOME {user}!\033[0m"
 non_verified = f"\033[1m\033[33mPLEASE REGISTER!\033[0m"
 pass_wrong = f"\033[1m\033[31mWRONG PASSWORD, PLEASE TRY AGAIN!\033[0m"
 is_reg = f"\033[34m\033[1mDo you want to register? (yes/no) : \033[0m"
-
+def register_system():
+    print(f"{register:^100}")
+    n_user = input(f"{username:>20}")
+    n_passwd = input(f"{password:>20}")
+    if n_user in users:
+        print(f"\033[1m\033[31mTHIS USER IS ALREADY REGISTERED!\033[0m")
+    else:
+        users[n_user] = n_passwd
+        print(f"\033[1m\033[32mSuccessfully Registered as {n_user}!\033[0m")
+        time.sleep(3)
+        os.system("cls")
 while True:
     print(f"{login:^100}")
     print(f"{logo:^108}")
@@ -32,25 +42,21 @@ while True:
         if reg.capitalize() == "Yes":
             time.sleep(1)
             os.system("cls")
-            print(f"{register:^100}")
-            n_user = input(f"{username:>20}")
-            n_passwd = input(f"{password:>20}")
-            if n_user in users:
-                print(f"\033[1m\033[31mTHIS USER IS ALREADY REGISTERED!\033[0m")
-            else:
-                print(f"\033[1m\033[32mSuccessfully Registered as {n_user}!\033[0m")
-                time.sleep(3)
-                os.system("cls")
-                print(f"{login:^100}")
-                users[n_user] = n_passwd
-                continue
+            register_system()
+
         elif reg.capitalize() == "No":
             exit()
         else:
             while True:
-                print(f"You either have to state 'Yes' or 'No' ")
-                reg = input(f"{is_reg:>30}")
-                
+                print(f"You either have to state 'Yes' or 'No'")
+                reg = input(f"{is_reg:>30}").strip().lower()
+                if reg == "yes":
+                    os.system("cls")
+                    register_system()
+                    break
+                elif reg == "no":
+                    exit()
+
 
     elif user in users and users[user] != passwd:
         print(f"{pass_wrong:^100}")
