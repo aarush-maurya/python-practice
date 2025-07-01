@@ -1,9 +1,7 @@
-print("Thirty days down, what do you think?")
-print()
-for i in range(1, 30):
-    thought = input(f"So, what was your thought for day {i}? :  ")
-    print()
-    my_text = (f"So your thought of day {i} was:\n")
-    print(f"{my_text: ^60}")
-    print(f"{thought: ^60}")
-    print()
+print("\033[31mThis is red\033[0m")
+print("\033[37;42mWhite on Green\033[0m")
+print("\033[1;33mBold Yellow\033[0m")
+print("\033[96;101mCyan on Red\033[0m")
+RED = "\033[31m"
+RESET = "\033[0m"
+print(RED + "Alert!" + RESET)
