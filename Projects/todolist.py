@@ -13,7 +13,7 @@ title = f"\033[34m=\033[0m=\033[31m=\033[33;1mTODO-LIST\033[0m\033[34m=\033[0m=\
 while True:
     print(f"{title: ^100}")
     fb = input("\033[93mDo you want to 'add','view','remove' or 'edit' the list\n-->\033[0m")
-    if fb == 'add':
+    if fb.lower().strip() == 'add':
         add_item = input(f"\033[34;1mEnter your task to be added to the list\n-->\033[0m")
         if add_item in my_list:
             warn_already = (f"\033[31;1m{add_item} is aleady in the list, you cant add dublicate tasks!\033[0m")
@@ -26,9 +26,9 @@ while True:
             print(f"{added: ^100}")
             time.sleep(1)
             os.system("cls")
-    elif fb == 'view':
+    elif fb.lower().strip() == 'view':
         print_list()
-    elif fb == 'remove':
+    elif fb.lower().strip() == 'remove':
         rem_item = input("\033[33;1mEnter the task to be removed\n-->\033[0m")
         if rem_item in my_list:
             confirm = input(f"\033[31;1mAre you sure you want to remove '{rem_item}' from the list?(type 'YES' or anythin else to cancel)\033[0m\n-->")
@@ -45,7 +45,7 @@ while True:
             print(f"{warn_not : ^100}")
             time.sleep(1)
             os.system("cls")
-    elif fb == "edit":
+    elif fb.lower().strip() == "edit":
         edit_item = input("\033[33;1mEnter the item you want to edit\033[0m\n-->")
         if edit_item in my_list:
             my_list.remove(edit_item)
