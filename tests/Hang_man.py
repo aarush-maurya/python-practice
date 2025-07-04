@@ -2,7 +2,7 @@ import random
 
 print(f"HANGMAN GAME")
 print()
-list_of_words = ["apple", "mango", "banana", "papaya", "kiwi", "tomato", "carrot"]
+list_of_words = ["apple", "mango", "banana", "papaya", "kiwi", "tomato", "carrot","grapes","dragon fruit"]
 word = random.choice(list_of_words)
 alpha_done = []
 life = 6
